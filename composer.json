@@ -1,0 +1,37 @@
+{
+    "name": "jaem3l/unfuck",
+    "type": "composer-plugin",
+    "description": "The library to unfuck the vendor code and fuck up your own",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Christopher Hertel",
+            "email": "mail@christopher-hertel.de"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "composer-plugin-api": "^2.0",
+        "nikic/php-parser": "^4.13"
+    },
+    "require-dev": {
+        "composer/composer": "^2.0",
+        "phpunit/phpunit": "^9.5"
+    },
+    "extra": {
+        "class": "Jæm3l\\Unfuck\\Plugin"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jæm3l\\Unfuck\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Jæm3l\\Unfuck\\Tests\\": "tests/"
+        },
+        "classmap": [
+            "example/Example.php"
+        ]
+    }
+}
