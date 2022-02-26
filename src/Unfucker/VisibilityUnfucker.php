@@ -6,6 +6,7 @@ namespace Jæm3l\Unfuck\Unfucker;
 
 use PhpParser\Node;
 use PhpParser\Node\Stmt\Class_;
+use PhpParser\Node\Stmt\ClassConst;
 use PhpParser\Node\Stmt\ClassMethod;
 use PhpParser\Node\Stmt\Property;
 use PhpParser\NodeVisitorAbstract;
@@ -14,7 +15,7 @@ class VisibilityUnfucker extends NodeVisitorAbstract
 {
     public function leaveNode(Node $node): void
     {
-        if (!$node instanceof ClassMethod && !$node instanceof Property) {
+        if (!$node instanceof ClassMethod && !$node instanceof Property && !$node instanceof ClassConst) {
             return;
         }
 
