@@ -9,3 +9,9 @@ class Example
     {
     }
 }
+function foo($test = null, $demo = [])
+{
+}
+function bar($baz = null)
+{
+}

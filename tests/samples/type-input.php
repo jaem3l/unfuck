@@ -12,3 +12,9 @@ class Example
         $this->foo = $foo;
     }
 }
+function foo(): int
+{
+}
+function bar(int $baz): void
+{
+}
