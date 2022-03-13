@@ -12,3 +12,9 @@ class Example
         $this->foo = $foo;
     }
 }
+function foo()
+{
+}
+function bar($baz = null)
+{
+}

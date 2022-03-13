@@ -7,6 +7,7 @@ namespace Jæm3l\Unfuck\Unfucker;
 use PhpParser\Node;
 use PhpParser\Node\Param;
 use PhpParser\Node\Stmt\ClassMethod;
+use PhpParser\Node\Stmt\Function_;
 use PhpParser\Node\Stmt\Property;
 use PhpParser\NodeVisitorAbstract;
 
@@ -19,6 +20,10 @@ class TypeUnfucker extends NodeVisitorAbstract
         }
 
         if ($node instanceof ClassMethod) {
+            $node->returnType = null;
+        }
+
+        if ($node instanceof Function_) {
             $node->returnType = null;
         }
 

@@ -27,13 +27,13 @@ final class CodeTest extends TestCase
         ];
 
         yield 'mandatory' => [
-            file_get_contents(__DIR__.'/samples/class-mandatory-input.php'),
-            file_get_contents(__DIR__.'/samples/class-mandatory-unfucked.php'),
+            file_get_contents(__DIR__.'/samples/mandatory-input.php'),
+            file_get_contents(__DIR__.'/samples/mandatory-unfucked.php'),
         ];
 
         yield 'type' => [
-            file_get_contents(__DIR__.'/samples/class-type-input.php'),
-            file_get_contents(__DIR__.'/samples/class-type-unfucked.php'),
+            file_get_contents(__DIR__.'/samples/type-input.php'),
+            file_get_contents(__DIR__.'/samples/type-unfucked.php'),
         ];
 
         yield 'visibility' => [
