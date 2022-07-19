@@ -10,7 +10,7 @@ use PhpParser\Node\Name;
 use PhpParser\Node\Param;
 use PhpParser\NodeVisitorAbstract;
 
-class MandatoryUnfucker extends NodeVisitorAbstract
+final class MandatoryUnfucker extends NodeVisitorAbstract
 {
     public function leaveNode(Node $node): void
     {

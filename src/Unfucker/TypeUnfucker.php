@@ -11,7 +11,7 @@ use PhpParser\Node\Stmt\Function_;
 use PhpParser\Node\Stmt\Property;
 use PhpParser\NodeVisitorAbstract;
 
-class TypeUnfucker extends NodeVisitorAbstract
+final class TypeUnfucker extends NodeVisitorAbstract
 {
     public function leaveNode(Node $node): void
     {

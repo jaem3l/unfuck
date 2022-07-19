@@ -9,7 +9,7 @@ use PhpParser\Node\Stmt\Class_;
 use PhpParser\Node\Stmt\ClassMethod;
 use PhpParser\NodeVisitorAbstract;
 
-class FinalUnfucker extends NodeVisitorAbstract
+final class FinalUnfucker extends NodeVisitorAbstract
 {
     public function enterNode(Node $node): void
     {
