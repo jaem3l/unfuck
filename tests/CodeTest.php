@@ -40,5 +40,10 @@ final class CodeTest extends TestCase
             file_get_contents(__DIR__.'/samples/class-visibility-input.php'),
             file_get_contents(__DIR__.'/samples/class-visibility-unfucked.php'),
         ];
+
+        yield 'readonly' => [
+            file_get_contents(__DIR__.'/samples/class-readonly-input.php'),
+            file_get_contents(__DIR__.'/samples/class-readonly-unfucked.php'),
+        ];
     }
 }
