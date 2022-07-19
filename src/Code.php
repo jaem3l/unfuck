@@ -6,6 +6,7 @@ namespace Jæm3l\Unfuck;
 
 use Jæm3l\Unfuck\Unfucker\FinalUnfucker;
 use Jæm3l\Unfuck\Unfucker\MandatoryUnfucker;
+use Jæm3l\Unfuck\Unfucker\ReadonlyUnfucker;
 use Jæm3l\Unfuck\Unfucker\TypeUnfucker;
 use Jæm3l\Unfuck\Unfucker\VisibilityUnfucker;
 use PhpParser\Error;
@@ -32,7 +33,7 @@ final class Code
 
     private static function getParser(): Parser
     {
-        return (new ParserFactory())->create(ParserFactory::ONLY_PHP7);
+        return (new ParserFactory())->createForHostVersion();
     }
 
     private static function getNodeTraverser(): NodeTraverser
@@ -42,6 +43,7 @@ final class Code
         $traverser->addVisitor(new MandatoryUnfucker());
         $traverser->addVisitor(new TypeUnfucker());
         $traverser->addVisitor(new VisibilityUnfucker());
+        $traverser->addVisitor(new ReadonlyUnfucker());
 
         return $traverser;
     }

@@ -5,21 +5,20 @@ declare(strict_types=1);
 namespace Jæm3l\Unfuck\Tests;
 
 use Jæm3l\Unfuck\Code;
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
 final class CodeTest extends TestCase
 {
-    /**
-     * @dataProvider provideUnfuckCodeScenarios
-     */
+    #[DataProvider('provideUnfuckCodeScenarios')]
     public function testUnfuck(string $code, string $expected): void
     {
         $actual = Code::unfuck($code);
 
-        static::assertSame($expected, $actual);
+        self::assertSame($expected, $actual);
     }
 
-    public function provideUnfuckCodeScenarios(): iterable
+    public static function provideUnfuckCodeScenarios(): iterable
     {
         yield 'final' => [
             file_get_contents(__DIR__.'/samples/class-final-input.php'),
@@ -39,6 +38,11 @@ final class CodeTest extends TestCase
         yield 'visibility' => [
             file_get_contents(__DIR__.'/samples/class-visibility-input.php'),
             file_get_contents(__DIR__.'/samples/class-visibility-unfucked.php'),
+        ];
+
+        yield 'readonly' => [
+            file_get_contents(__DIR__.'/samples/class-readonly-input.php'),
+            file_get_contents(__DIR__.'/samples/class-readonly-unfucked.php'),
         ];
     }
 }
