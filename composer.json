@@ -12,10 +12,10 @@
     "require": {
         "php": "^8.1",
         "composer-plugin-api": "^2.0",
-        "nikic/php-parser": "^4.13"
+        "nikic/php-parser": "^4.14"
     },
     "require-dev": {
-        "composer/composer": "^2.0",
+        "composer/composer": "^2.3",
         "phpunit/phpunit": "^9.5"
     },
     "extra": {
