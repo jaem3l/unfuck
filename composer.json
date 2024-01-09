@@ -12,11 +12,11 @@
     "require": {
         "php": "^8.1",
         "composer-plugin-api": "^2.0",
-        "nikic/php-parser": "^4.14"
+        "nikic/php-parser": "^5.0"
     },
     "require-dev": {
-        "composer/composer": "^2.3",
-        "phpunit/phpunit": "^9.5"
+        "composer/composer": "^2.6",
+        "phpunit/phpunit": "^10.5"
     },
     "extra": {
         "class": "Jæm3l\\Unfuck\\Plugin"

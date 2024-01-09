@@ -8,6 +8,7 @@ So, if you are tired by the burden OSS maintainers are putting onto you by
  * reducing the visibility of properties or methods to `private` or `protected`
  * limiting capabilities by adding type declarations, return types or typed properties
  * forcing you to pass method arguments by making them mandatory
+ * enforcing immutability with harsh `readonly` modifiers
  * improving runtime stability 
  
 Jæm3l got you covered!
@@ -27,7 +28,7 @@ Your vendor library provides you a feature class like
 ```php
 final class Example
 {
-    private string $foo;
+    private readonly string $foo;
 
     public function __construct(string $foo)
     {
