@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Jæm3l\Unfuck\Unfucker;
 
+use PhpParser\Modifiers;
 use PhpParser\Node;
-use PhpParser\Node\Stmt\Class_;
 use PhpParser\Node\Stmt\ClassConst;
 use PhpParser\Node\Stmt\ClassMethod;
 use PhpParser\Node\Stmt\Property;
@@ -20,11 +20,11 @@ final class VisibilityUnfucker extends NodeVisitorAbstract
         }
 
         if ($node->isProtected()) {
-            $node->flags ^= Class_::MODIFIER_PROTECTED;
-            $node->flags |= Class_::MODIFIER_PUBLIC;
+            $node->flags ^= Modifiers::PROTECTED;
+            $node->flags |= Modifiers::PUBLIC;
         } elseif ($node->isPrivate()) {
-            $node->flags ^= Class_::MODIFIER_PRIVATE;
-            $node->flags |= Class_::MODIFIER_PUBLIC;
+            $node->flags ^= Modifiers::PRIVATE;
+            $node->flags |= Modifiers::PUBLIC;
         }
     }
 }
