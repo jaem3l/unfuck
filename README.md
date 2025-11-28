@@ -13,7 +13,7 @@ So, if you are tired by the burden OSS maintainers are putting onto you by
  
 Jæm3l got you covered!
 
-Just install jaem3l/unfuck to unfuck the vendor code your using and fuck up your own:
+Just install jaem3l/unfuck to unfuck the vendor code you're using and fuck up your own:
 ```
 $ composer require jaem3l/unfuck
 ```
